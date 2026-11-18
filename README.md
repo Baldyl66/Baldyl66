@@ -25,7 +25,6 @@
 <a href="#!"><img src="assets/neon/project-panelys.svg" width="49%" alt="Panelys: personal data dashboard" /></a>
 <a href="#!"><img src="assets/neon/project-arcana.svg" width="49%" alt="Arcana Bestia: fantasy creature game" /></a>
 <a href="#!"><img src="assets/neon/project-bot-lcp.svg" width="49%" alt="Bot LCP Discord: Discord bot and multiplayer activity" /></a>
-<a href="#!"><img src="assets/neon/project-polo-radio.svg" width="49%" alt="Polo Radio: Android car head unit with voice assistant" /></a>
 
 <br/><br/>
 
