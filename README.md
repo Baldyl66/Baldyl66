@@ -40,6 +40,10 @@
 
 <a href="#!"><img src="https://streak-stats.demolab.com?user=Baldyl66&hide_border=true&border_radius=18&background=0A0814&ring=FF2E88&fire=00E5FF&currStreakLabel=FF2E88&sideLabels=00E5FF&currStreakNum=F5F3FF&sideNums=F5F3FF&dates=A9A3C7&stroke=2A1F45" alt="GitHub streak" /></a>
 
+<br/><br/>
+
+<a href="#!"><img src="assets/neon/graffiti.svg" width="100%" alt="Graffiti wall: one year of contributions sprayed in neon paint" /></a>
+
 <!-- SPOTIFY : remplace TON-APP par ton domaine Railway puis enleve les balises de commentaire
 <br/>
 <a href="https://open.spotify.com/"><img src="https://TON-APP.up.railway.app/api/orchestrator?background_color=0A0814&border_color=FF2E88&show_status=true" alt="Now playing on Spotify" /></a>
