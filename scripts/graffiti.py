@@ -81,37 +81,75 @@ def text_path(txt, x, y, size, anchor="start", spacing=0.04):
 
 
 # ------------------------------------------------------------------ drawing
-def splat(rnd, cx, cy, lvl, idx):
-    """Irregular paint splat with satellite droplets (and a drip for big days)."""
+CYCLE = 14.0      # seconds for a full loop
+SPREAD = 8.5      # splats land at random moments within this window
+
+
+def kt(*times):
+    """Clamp and format keyTimes as fractions of the cycle."""
+    out, last = [], 0.0
+    for t in times:
+        v = min(max(t / CYCLE, last), 1.0)
+        out.append(v)
+        last = v
+    return ";".join(f"{v:.4f}" for v in out)
+
+
+def splat(rnd, cx, cy, lvl):
+    """Paint hit: blob bursts out, droplets fly from the centre, big ones drip and ring."""
     col = LEVEL_COLORS[lvl]
     base = {1: 3.2, 2: 4.4, 3: 5.4, 4: 6.6}[lvl]
+    d0 = rnd.uniform(0, SPREAD)
+    end0, end1 = CYCLE - 1.6, CYCLE - 0.8
+
     pts = []
     n = 9
     for k in range(n):
-        a = k / n * 6.2832
+        a = k / n * 2 * math.pi
         r = base * rnd.uniform(.72, 1.18)
-
-        pts.append((cx + math.cos(a) * r, cy + math.sin(a) * r))
+        pts.append((math.cos(a) * r, math.sin(a) * r))
     d = f"M{pts[0][0]:.1f} {pts[0][1]:.1f}"
     for k in range(1, n + 1):
         p0, p1 = pts[(k - 1) % n], pts[k % n]
-        mx, my = (p0[0] + p1[0]) / 2, (p0[1] + p1[1]) / 2
-        d += f" Q{p0[0]:.1f} {p0[1]:.1f} {mx:.1f} {my:.1f}"
+        d += f" Q{p0[0]:.1f} {p0[1]:.1f} {(p0[0] + p1[0]) / 2:.1f} {(p0[1] + p1[1]) / 2:.1f}"
     d += "Z"
-    drops = ""
-    for _ in range(lvl):
+    glow = ' filter="url(#gl)"' if lvl >= 3 else ""
 
-        a = rnd.uniform(0, 6.28)
-        r = base + rnd.uniform(1.5, 4.5)
-        drops += (f'<circle cx="{cx + math.cos(a) * r:.1f}" cy="{cy + math.sin(a) * r:.1f}" '
-                  f'r="{rnd.uniform(.6, 1.3):.1f}" fill="{col}"/>')
+    times = kt(0, d0, d0 + .09, d0 + .2, end0, end1, CYCLE)
+    blob = (f'<path d="{d}" fill="{col}"{glow} transform="scale(0)">'
+            f'<animateTransform attributeName="transform" type="scale" dur="{CYCLE}s" repeatCount="indefinite" '
+            f'keyTimes="{times}" values="0;0;1.35;1;1;0;0" calcMode="spline" '
+            f'keySplines="0 0 1 1;.2 .9 .3 1;.4 0 .6 1;0 0 1 1;.4 0 1 1;0 0 1 1"/></path>')
+
+    drops = ""
+    for _ in range(lvl + 1):
+        a = rnd.uniform(0, 2 * math.pi)
+        r = base + rnd.uniform(2, 6)
+        fx, fy = math.cos(a) * r, math.sin(a) * r
+        dt0 = d0 + .03
+        t = kt(0, dt0, dt0 + .16, end0, end1, CYCLE)
+        drops += (f'<circle r="{rnd.uniform(.6, 1.4):.1f}" fill="{col}" opacity="0">'
+                  f'<animateTransform attributeName="transform" type="translate" dur="{CYCLE}s" repeatCount="indefinite" '
+                  f'keyTimes="{t}" values="0 0;0 0;{fx:.1f} {fy:.1f};{fx:.1f} {fy:.1f};{fx:.1f} {fy:.1f};0 0"/>'
+                  f'<animate attributeName="opacity" dur="{CYCLE}s" repeatCount="indefinite" '
+                  f'keyTimes="{t}" values="0;0;1;1;0;0"/></circle>')
+
     drip = ""
-    if lvl == 4 and rnd.random() < .7:
-        L = rnd.uniform(6, 12)
-        drip = (f'<path d="M{cx - 1.3:.1f} {cy:.1f} v{L:.1f} a1.3 1.3 0 0 0 2.6 0 v-{L:.1f}z" fill="{col}"/>')
-    glow = f' filter="url(#gl)"' if lvl >= 3 else ""
-    return (f'<g class="s" style="animation-delay:{idx * 0.11:.2f}s;transform-origin:{cx:.1f}px {cy:.1f}px">'
-            f'<path d="{d}" fill="{col}"{glow}/>{drops}{drip}</g>')
+    if lvl == 4 and rnd.random() < .75:
+        L = rnd.uniform(6, 13)
+        t = kt(0, d0 + .25, d0 + 1.6, end0, end1, CYCLE)
+        drip = (f'<path d="M-1.3 0 v{L:.1f} a1.3 1.3 0 0 0 2.6 0 v-{L:.1f}z" fill="{col}" transform="scale(1 0)">'
+                f'<animateTransform attributeName="transform" type="scale" dur="{CYCLE}s" repeatCount="indefinite" '
+                f'keyTimes="{t}" values="1 0;1 0;1 1;1 1;1 0;1 0"/></path>')
+
+    ring = ""
+    if lvl >= 3:
+        t = kt(0, d0, d0 + .45, CYCLE)
+        ring = (f'<circle r="0" fill="none" stroke="{col}" stroke-width="1.2" opacity="0">'
+                f'<animate attributeName="r" dur="{CYCLE}s" repeatCount="indefinite" keyTimes="{t}" values="0;0;{base * 2.6:.1f};{base * 2.6:.1f}"/>'
+                f'<animate attributeName="opacity" dur="{CYCLE}s" repeatCount="indefinite" keyTimes="{t}" values="0;.9;0;0"/></circle>')
+
+    return f'<g transform="translate({cx:.1f} {cy:.1f})">{ring}{drip}{blob}{drops}</g>'
 
 
 def build(total, weeks):
@@ -130,7 +168,7 @@ def build(total, weeks):
             if lvl == 0:
                 cells.append(f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="1.3" fill="{EDGE}"/>')
             else:
-                cells.append(splat(rnd, cx, cy, lvl, wi))
+                cells.append(splat(rnd, cx, cy, lvl))
             if di == 0:
                 m = date[5:7]
                 if m != last_month and wi < cols - 2:
@@ -138,8 +176,6 @@ def build(total, weeks):
                     months.append(f'<text x="{cx - 4:.1f}" y="{gy - 18}" class="m">{name}</text>')
                     last_month = m
 
-    sweep = cols * 0.11
-    cycle = sweep + 9
     title, tw = text_path("GRAFFITI WALL", 40, 46, 26)
     num, nw = text_path(f"{total:,}".replace(",", " "), W - 40, 46, 26, "end")
     label_x = W - 40 - nw - 10
@@ -147,25 +183,10 @@ def build(total, weeks):
     legend = "".join(
         f'<circle cx="{legend_x + 60 + i * 22}" cy="{H - 26}" r="{[3.2, 4.4, 5.4, 6.6][i]}" fill="{LEVEL_COLORS[i + 1]}"/>'
         for i in range(4))
-    nozzle_y = gy + 3 * cell
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
   <style>
     .m {{ font-family: {MONO}; font-size: 10px; letter-spacing: 1.5px; fill: {DIM}; }}
     .t {{ font-family: {MONO}; font-size: 11px; letter-spacing: 2px; fill: {MUTED}; }}
-    .s {{ opacity: 0; transform: scale(0); animation: spray {cycle:.2f}s cubic-bezier(.2,.9,.3,1.3) infinite; }}
-    @keyframes spray {{
-      0% {{ opacity: 0; transform: scale(0); }}
-      2% {{ opacity: 1; transform: scale(1.25); }}
-      4% {{ opacity: 1; transform: scale(1); }}
-      80% {{ opacity: 1; transform: scale(1); }}
-      90%, 100% {{ opacity: 0; transform: scale(.6); }}
-    }}
-    .noz {{ animation: noz {cycle:.2f}s linear infinite; }}
-    @keyframes noz {{
-      0% {{ transform: translateX(0); opacity: 1; }}
-      {sweep / cycle * 100:.2f}% {{ transform: translateX({grid_w:.0f}px); opacity: 1; }}
-      {sweep / cycle * 100 + 1:.2f}%, 100% {{ transform: translateX({grid_w:.0f}px); opacity: 0; }}
-    }}
     .pulse {{ animation: pulse 2.6s ease-in-out infinite; }}
     @keyframes pulse {{ 0%,100% {{ opacity: .4; }} 50% {{ opacity: 1; }} }}
   </style>
@@ -196,11 +217,6 @@ def build(total, weeks):
   <path d="{num}" fill="{CYAN}"/>
   {''.join(months)}
   {''.join(cells)}
-  <g class="noz">
-    <circle cx="{gx - cell:.1f}" cy="{nozzle_y:.1f}" r="16" fill="{PINK}" fill-opacity=".12"/>
-    <circle cx="{gx - cell:.1f}" cy="{nozzle_y:.1f}" r="4" fill="{WHITE}" filter="url(#gl)"/>
-    <rect x="{gx - cell - 1:.1f}" y="{gy - 10:.1f}" width="2" height="{6 * cell + 20:.1f}" fill="{PINK}" fill-opacity=".25"/>
-  </g>
   <text x="40" y="{H - 22}" class="t">SPRAYED DAILY BY GITHUB ACTIONS</text>
   <text x="{legend_x:.0f}" y="{H - 22}" class="t">LESS</text>
   {legend}
