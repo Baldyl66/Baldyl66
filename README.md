@@ -1,41 +1,39 @@
 <div align="center">
 
-<a href="#!"><img src="assets/header.svg" width="100%" alt="Dylan Balmigere, Software Developer, Games, Creative Tech" /></a>
+<a href="#!"><img src="assets/neon/header.svg" width="100%" alt="Dylan Balmigere, Software Developer, Games, Creative Tech" /></a>
 
 <br/><br/>
 
-<a href="https://www.linkedin.com/in/dylan-balmigere-72aa85335/"><img src="assets/btn-linkedin.svg" height="54" alt="LinkedIn" /></a>
-<a href="https://dylan-balmigere.fr"><img src="assets/btn-portfolio.svg" height="54" alt="Portfolio" /></a>
-<a href="mailto:dylanbalmigere@gmail.com"><img src="assets/btn-email.svg" height="54" alt="Email" /></a>
-
-<br/>
-
-<a href="#!"><img src="https://komarev.com/ghpvc/?username=Baldyl66&style=flat-square&color=FF2E88&label=profile+views" alt="Profile views" /></a>
+<a href="https://www.linkedin.com/in/dylan-balmigere-72aa85335/"><img src="assets/neon/btn-linkedin.svg" height="54" alt="LinkedIn" /></a>
+<a href="https://dylan-balmigere.fr"><img src="assets/neon/btn-portfolio.svg" height="54" alt="Portfolio" /></a>
+<a href="mailto:dylanbalmigere@gmail.com"><img src="assets/neon/btn-email.svg" height="54" alt="Email" /></a>
+<a href="#!"><img src="assets/neon/btn-views.svg" height="54" alt="Profile views" /></a>
+<img src="https://komarev.com/ghpvc/?username=Baldyl66" width="1" height="1" alt="" />
 
 <br/><br/>
 
-<a href="#!"><img src="assets/title-about.svg" width="100%" alt="About Me" /></a>
+<a href="#!"><img src="assets/neon/title-about.svg" width="100%" alt="About Me" /></a>
 
-<a href="#!"><img src="assets/about.svg" width="100%" alt="Hi, I'm Dylan. Creative software developer building mobile, web, game and creative tools." /></a>
-
-<br/><br/>
-
-<a href="#!"><img src="assets/title-work.svg" width="100%" alt="Selected Work" /></a>
-
-<a href="#!"><img src="assets/project-panelys.svg" width="49%" alt="Panelys: personal data dashboard" /></a>
-<a href="#!"><img src="assets/project-arcana.svg" width="49%" alt="Arcana Bestia: fantasy creature game" /></a>
-<a href="#!"><img src="assets/project-skylanders.svg" width="49%" alt="Skylanders Generator: AI card generator" /></a>
-<a href="#!"><img src="assets/project-switch.svg" width="49%" alt="Switch Mod Manager: modding toolkit" /></a>
+<a href="#!"><img src="assets/neon/about.svg" width="100%" alt="Hi, I'm Dylan. Creative software developer building mobile, web, game and creative tools." /></a>
 
 <br/><br/>
 
-<a href="#!"><img src="assets/title-stack.svg" width="100%" alt="Tech Stack" /></a>
+<a href="#!"><img src="assets/neon/title-work.svg" width="100%" alt="Selected Work" /></a>
+
+<a href="#!"><img src="assets/neon/project-panelys.svg" width="49%" alt="Panelys: personal data dashboard" /></a>
+<a href="#!"><img src="assets/neon/project-arcana.svg" width="49%" alt="Arcana Bestia: fantasy creature game" /></a>
+<a href="#!"><img src="assets/neon/project-skylanders.svg" width="49%" alt="Skylanders Generator: AI card generator" /></a>
+<a href="#!"><img src="assets/neon/project-switch.svg" width="49%" alt="Switch Mod Manager: modding toolkit" /></a>
+
+<br/><br/>
+
+<a href="#!"><img src="assets/neon/title-stack.svg" width="100%" alt="Tech Stack" /></a>
 
 <a href="#!"><img src="https://skillicons.dev/icons?i=kotlin,androidstudio,flutter,dart,python,js,ts,php,html,css,lua,git,github&perline=13&theme=dark" alt="Kotlin, Android Studio, Flutter, Dart, Python, JavaScript, TypeScript, PHP, HTML, CSS, Lua, Git, GitHub" /></a>
 
 <br/><br/>
 
-<a href="#!"><img src="assets/title-activity.svg" width="100%" alt="GitHub Activity" /></a>
+<a href="#!"><img src="assets/neon/title-activity.svg" width="100%" alt="GitHub Activity" /></a>
 
 <a href="#!"><img src="https://github-readme-stats.vercel.app/api?username=Baldyl66&show_icons=true&hide_rank=true&hide_border=true&border_radius=18&bg_color=0A0814&title_color=FF2E88&icon_color=00E5FF&text_color=D9D4F2" height="165" alt="GitHub stats" /></a>
 <a href="#!"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Baldyl66&layout=compact&langs_count=6&hide_border=true&border_radius=18&bg_color=0A0814&title_color=00E5FF&text_color=D9D4F2" height="165" alt="Top languages" /></a>
@@ -49,6 +47,6 @@
 
 <br/><br/>
 
-<a href="#!"><img src="assets/footer.svg" width="100%" alt="Create. Break. Rebuild." /></a>
+<a href="#!"><img src="assets/neon/footer.svg" width="100%" alt="Create. Break. Rebuild." /></a>
 
 </div>
