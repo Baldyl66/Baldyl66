@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="#!"><img src="assets/neon/header.svg" width="100%" alt="Dylan Balmigere, Software Developer, Games, Creative Tech" /></a>
+<a href="#!"><img src="assets/neon/header-fanart.svg" width="100%" alt="Dylan Balmigere, Software Developer, Games, Creative Tech" /></a>
 
 <br/><br/>
 
