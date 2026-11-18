@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="48" viewBox="0 0 860 48">
+  <style>
+  .fade { opacity: 0; animation: fadeUp .8s cubic-bezier(.2,.7,.2,1) forwards; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  .pulse { animation: pulse 3.2s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity: .35; } 50% { opacity: .9; } }
+  .sans { font-family: 'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif; }
+  .mono { font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+</style>
+  <defs>
+    <linearGradient id="l" x1="0" x2="1"><stop offset="0" stop-color="#6366F1" stop-opacity="0"/><stop offset="1" stop-color="#6366F1" stop-opacity=".7"/></linearGradient>
+    <linearGradient id="r" x1="0" x2="1"><stop offset="0" stop-color="#6366F1" stop-opacity=".7"/><stop offset="1" stop-color="#6366F1" stop-opacity="0"/></linearGradient>
+  </defs>
+  <g class="fade">
+    <text x="430.0" y="33" text-anchor="middle" class="sans" font-size="24" font-weight="700" letter-spacing="1" fill="#6366F1">Selected Work</text>
+    <rect x="100.0" y="24" width="200" height="1.5" fill="url(#l)"/>
+    <rect x="560.0" y="24" width="200" height="1.5" fill="url(#r)"/>
+    <circle cx="308.0" cy="24.75" r="3" fill="#6366F1" class="pulse"/>
+    <circle cx="552.0" cy="24.75" r="3" fill="#6366F1" class="pulse"/>
+  </g>
+</svg>

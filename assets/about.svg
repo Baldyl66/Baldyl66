@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="330" viewBox="0 0 860 330">
+  <style>
+  .fade { opacity: 0; animation: fadeUp .8s cubic-bezier(.2,.7,.2,1) forwards; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  .pulse { animation: pulse 3.2s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity: .35; } 50% { opacity: .9; } }
+  .sans { font-family: 'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif; }
+  .mono { font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+
+  .blink { animation: blink 1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  </style>
+  
+  <defs>
+    <radialGradient id="glowa" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(103.2 0) scale(602.0 363.00000000000006)">
+      <stop offset="0" stop-color="#6366F1" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#6366F1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sweepa" x1="0" y1="0" x2="860" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#818CF8" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#818CF8" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#818CF8" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+        values="-860 0; 860 0" dur="5s" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="858" height="328" rx="16" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+  <rect x="1" y="1" width="858" height="328" rx="16" fill="url(#glowa)"/>
+  <rect x="1" y="1" width="858" height="328" rx="16" fill="none" stroke="url(#sweepa)" stroke-width="1.5"/>
+
+  <g class="fade">
+    <text x="40" y="62" class="sans" font-size="30" font-weight="700" fill="#F8FAFC">Hi, I'm Dylan<tspan fill="#818CF8">.</tspan></text>
+    <text x="40" y="86" class="mono" font-size="12" letter-spacing="2" fill="#818CF8">CREATIVE SOFTWARE DEVELOPER</text>
+  </g>
+  <g class="fade" style="animation-delay:.25s"><text x="40" y="118" class="sans" font-size="15" fill="#94A3B8">I build original software, from mobile and web apps</text><text x="40" y="142" class="sans" font-size="15" fill="#94A3B8">to games and creative tools. I love turning concepts</text><text x="40" y="166" class="sans" font-size="15" fill="#94A3B8">into polished, functional products, with a strong</text><text x="40" y="190" class="sans" font-size="15" fill="#94A3B8">focus on user experience and clean architecture.</text></g>
+  <g class="fade" style="animation-delay:0.5s"><rect x="40" y="223" width="24" height="24" rx="6" fill="#6366F1" fill-opacity=".15"/><g transform="translate(44 227) scale(0.6666666666666666)" fill="none" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></g><text x="76" y="240" class="sans" font-size="14" fill="#CBD5E1">Android Developer · Apprenticeship</text></g><g class="fade" style="animation-delay:0.65s"><rect x="40" y="253" width="24" height="24" rx="6" fill="#6366F1" fill-opacity=".15"/><g transform="translate(44 257) scale(0.6666666666666666)" fill="none" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></g><text x="76" y="270" class="sans" font-size="14" fill="#CBD5E1">Master's in AI Integration &amp; Development · Ynov</text></g><g class="fade" style="animation-delay:0.8s"><rect x="40" y="283" width="24" height="24" rx="6" fill="#6366F1" fill-opacity=".15"/><g transform="translate(44 287) scale(0.6666666666666666)" fill="none" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></g><text x="76" y="300" class="sans" font-size="14" fill="#CBD5E1">Based in France · FR / EN</text></g>
+  <g class="fade" style="animation-delay:.4s">
+    <rect x="470" y="34" width="356" height="262" rx="12" fill="#0B1120" stroke="#1E293B"/>
+    <circle cx="490" cy="54" r="5" fill="#F87171"/>
+    <circle cx="508" cy="54" r="5" fill="#FBBF24"/>
+    <circle cx="526" cy="54" r="5" fill="#34D399"/>
+    <text x="808" y="58" text-anchor="end" class="mono" font-size="11" fill="#64748B">Dylan.kt</text>
+    <rect x="470" y="72" width="356" height="1" fill="#1E293B"/>
+  </g>
+  <text x="510" y="104" class="mono fade" font-size="13" xml:space="preserve" style="animation-delay:0.8s"><tspan fill="#C792EA">val </tspan><tspan fill="#E2E8F0">dylan </tspan><tspan fill="#64748B">= </tspan><tspan fill="#818CF8">Developer</tspan><tspan fill="#64748B">(</tspan></text><text x="488" y="104" class="mono" font-size="11" fill="#334155">1</text><text x="510" y="126" class="mono fade" font-size="13" xml:space="preserve" style="animation-delay:0.98s"><tspan fill="#E2E8F0">  role      </tspan><tspan fill="#64748B">= </tspan><tspan fill="#A5E844">"Software Dev"</tspan><tspan fill="#64748B">,</tspan></text><text x="488" y="126" class="mono" font-size="11" fill="#334155">2</text><text x="510" y="148" class="mono fade" font-size="13" xml:space="preserve" style="animation-delay:1.1600000000000001s"><tspan fill="#E2E8F0">  focus     </tspan><tspan fill="#64748B">= </tspan><tspan fill="#818CF8">listOf</tspan><tspan fill="#64748B">(</tspan></text><text x="488" y="148" class="mono" font-size="11" fill="#334155">3</text><text x="510" y="170" class="mono fade" font-size="13" xml:space="preserve" style="animation-delay:1.34s"><tspan fill="#A5E844">    "Android"</tspan><tspan fill="#64748B">, </tspan><tspan fill="#A5E844">"Web"</tspan><tspan fill="#64748B">,</tspan></text><text x="488" y="170" class="mono" font-size="11" fill="#334155">4</text><text x="510" y="192" class="mono fade" font-size="13" xml:space="preserve" style="animation-delay:1.52s"><tspan fill="#A5E844">    "Games"</tspan><tspan fill="#64748B">),</tspan></text><text x="488" y="192" class="mono" font-size="11" fill="#334155">5</text><text x="510" y="214" class="mono fade" font-size="13" xml:space="preserve" style="animation-delay:1.7s"><tspan fill="#E2E8F0">  exploring </tspan><tspan fill="#64748B">= </tspan><tspan fill="#A5E844">"AI Integration"</tspan><tspan fill="#64748B">,</tspan></text><text x="488" y="214" class="mono" font-size="11" fill="#334155">6</text><text x="510" y="236" class="mono fade" font-size="13" xml:space="preserve" style="animation-delay:1.8800000000000001s"><tspan fill="#E2E8F0">  motto     </tspan><tspan fill="#64748B">= </tspan><tspan fill="#A5E844">"Create. Repeat."</tspan></text><text x="488" y="236" class="mono" font-size="11" fill="#334155">7</text><text x="510" y="258" class="mono fade" font-size="13" xml:space="preserve" style="animation-delay:2.06s"><tspan fill="#64748B">)</tspan></text><text x="488" y="258" class="mono" font-size="11" fill="#334155">8</text>
+  <rect x="524" y="246" width="8" height="15" fill="#818CF8" class="blink"/>
+</svg>
