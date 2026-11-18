@@ -4,10 +4,12 @@
 
 <br/><br/>
 
-<a href="https://www.linkedin.com/in/dylan-balmigere-72aa85335/"><img src="assets/neon/btn-linkedin.svg" height="54" alt="LinkedIn" /></a>
-<a href="https://dylan-balmigere.fr"><img src="assets/neon/btn-portfolio.svg" height="54" alt="Portfolio" /></a>
-<a href="mailto:dylanbalmigere@gmail.com"><img src="assets/neon/btn-email.svg" height="54" alt="Email" /></a>
-<a href="#!"><img src="assets/neon/btn-views.svg" height="54" alt="Profile views" /></a>
+<a href="https://www.linkedin.com/in/dylan-balmigere-72aa85335/"><img src="assets/neon/btn-linkedin.svg" height="48" alt="LinkedIn" /></a>
+<a href="https://dylan-balmigere.fr"><img src="assets/neon/btn-portfolio.svg" height="48" alt="Portfolio" /></a>
+<a href="https://x.com/DBalmigere"><img src="assets/neon/btn-x.svg" height="48" alt="X / Twitter" /></a>
+<a href="mailto:dylanbalmigere@gmail.com"><img src="assets/neon/btn-email.svg" height="48" alt="Email" /></a>
+
+<a href="#!"><img src="assets/neon/btn-views.svg" height="48" alt="Profile views" /></a>
 <img src="https://komarev.com/ghpvc/?username=Baldyl66" width="1" height="1" alt="" />
 
 <br/><br/>
@@ -22,8 +24,8 @@
 
 <a href="#!"><img src="assets/neon/project-panelys.svg" width="49%" alt="Panelys: personal data dashboard" /></a>
 <a href="#!"><img src="assets/neon/project-arcana.svg" width="49%" alt="Arcana Bestia: fantasy creature game" /></a>
-<a href="#!"><img src="assets/neon/project-skylanders.svg" width="49%" alt="Skylanders Generator: AI card generator" /></a>
-<a href="#!"><img src="assets/neon/project-switch.svg" width="49%" alt="Switch Mod Manager: modding toolkit" /></a>
+<a href="#!"><img src="assets/neon/project-bot-lcp.svg" width="49%" alt="Bot LCP Discord: Discord bot and multiplayer activity" /></a>
+<a href="#!"><img src="assets/neon/project-polo-radio.svg" width="49%" alt="Polo Radio: Android car head unit with voice assistant" /></a>
 
 <br/><br/>
 
