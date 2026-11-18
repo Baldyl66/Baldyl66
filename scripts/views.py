@@ -12,8 +12,21 @@ state = {"fetches": 0}
 if os.path.exists(STATE):
     state = json.load(open(STATE))
 
-req = urllib.request.Request(f"https://komarev.com/ghpvc/?username={USER}", headers={"User-Agent": "views-updater"})
-svg = urllib.request.urlopen(req, timeout=30).read().decode()
+import sys, time
+
+svg = None
+for attempt in range(4):
+    try:
+        req = urllib.request.Request(f"https://komarev.com/ghpvc/?username={USER}",
+                                     headers={"User-Agent": "Mozilla/5.0 (views-updater)"})
+        svg = urllib.request.urlopen(req, timeout=60).read().decode()
+        break
+    except Exception as e:  # network hiccup: wait and retry
+        print(f"attempt {attempt + 1} failed: {e}")
+        time.sleep(15)
+if svg is None:
+    print("counter unreachable, keeping the current button")
+    sys.exit(0)
 nums = re.findall(r">\s*([\d,]+)\s*<", svg)
 raw = int(nums[-1].replace(",", ""))
 state["fetches"] += 1
