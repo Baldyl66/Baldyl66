@@ -1,25 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="190" height="48" viewBox="0 0 190 48">
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="54" viewBox="0 0 200 54">
   <style>
-  .fade { opacity: 0; animation: fadeUp .8s cubic-bezier(.2,.7,.2,1) forwards; }
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-  .pulse { animation: pulse 3.2s ease-in-out infinite; }
-  @keyframes pulse { 0%,100% { opacity: .35; } 50% { opacity: .9; } }
   .sans { font-family: 'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif; }
   .mono { font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+  .in { opacity: 0; animation: in .7s cubic-bezier(.2,.8,.2,1) forwards; }
+  @keyframes in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  .flick { animation: flick 4.5s linear infinite; }
+  @keyframes flick { 0%,18%,22%,62%,64%,100% { opacity: 1; } 20%,63% { opacity: .25; } }
+  .pulse { animation: pulse 2.6s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity: .35; } 50% { opacity: 1; } }
+  .gp { animation: gp 3.2s steps(1) infinite; }
+  .gc { animation: gc 3.2s steps(1) infinite; }
+  @keyframes gp { 0%,86%,100% { transform: translate(0,0); opacity: .0; } 88% { transform: translate(-6px,2px); opacity: .9; } 91% { transform: translate(5px,-2px); opacity: .9; } 94% { transform: translate(-3px,0); opacity: .9; } }
+  @keyframes gc { 0%,86%,100% { transform: translate(0,0); opacity: .0; } 88% { transform: translate(6px,-2px); opacity: .9; } 91% { transform: translate(-5px,2px); opacity: .9; } 94% { transform: translate(3px,1px); opacity: .9; } }
+  .drip { animation: drip 6s ease-in infinite; }
+  @keyframes drip { 0% { transform: scaleY(0); } 60%,100% { transform: scaleY(1); } }
 </style>
   <defs>
-    <linearGradient id="sb1" x1="0" y1="0" x2="190" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#818CF8" stop-opacity="0"/>
-      <stop offset=".5" stop-color="#818CF8" stop-opacity=".9"/>
-      <stop offset="1" stop-color="#818CF8" stop-opacity="0"/>
-      <animateTransform attributeName="gradientTransform" type="translate" values="-190 0; 190 0" dur="4s" repeatCount="indefinite"/>
-    </linearGradient>
+    <linearGradient id="bb1" x1="0" x2="1"><stop offset="0" stop-color="#FF2E88"/><stop offset="1" stop-color="#00E5FF"/></linearGradient>
+    <filter id="fb1" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="3"/></filter>
   </defs>
-  <rect x="1" y="1" width="188" height="46" rx="12" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
-  <rect x="1" y="1" width="188" height="46" rx="12" fill="none" stroke="url(#sb1)" stroke-width="1.5"/>
-  <g transform="translate(20 13) scale(.9167)"><path fill="#0A66C2" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.85 1.637-1.71 3.37-1.71 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></g>
-  <text x="54" y="30" class="sans" font-size="15" font-weight="600" fill="#F8FAFC">LinkedIn</text>
-  <g transform="translate(156 16)" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M4 12 12 4M6 4h6v6" transform="scale(1.1)"/>
+  <rect x="2" y="2" width="196" height="50" rx="10" fill="#0A0814"/>
+  <rect x="2" y="2" width="196" height="50" rx="10" fill="none" stroke="url(#bb1)" stroke-width="2" filter="url(#fb1)" class="pulse"/>
+  <rect x="2" y="2" width="196" height="50" rx="10" fill="none" stroke="url(#bb1)" stroke-width="1.6"/>
+  <rect x="14" y="13" width="30" height="28" rx="7" fill="#00E5FF" fill-opacity=".16"/>
+  <g transform="translate(19 17) scale(.8333)"><path fill="#4FA3FF" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.85 1.637-1.71 3.37-1.71 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></g>
+  <path d="M58.7236328125 35.0V18.671875H61.9892578125V32.216796875H65.34765625V35.0ZM67.266953125 35.0V18.671875H70.42125V35.0ZM72.860078125 35.0V18.671875H76.2184765625L77.72140625 26.49267578125V18.671875H80.875703125V35.0H77.684296875L76.051484375 26.8359375V35.0ZM83.46296875 35.0V18.671875H86.691484375V25.21240234375L88.21296875 18.671875H91.4971484375L89.66951171875 26.1494140625L91.87751953125 35.0H88.4912890625L86.7100390625 27.095703125V35.0ZM93.57416015625 35.0V18.671875H100.10541015625V21.826171875H96.89544921875V25.00830078125H99.97552734375V28.0791015625H96.89544921875V31.81787109375H100.3187890625V35.0ZM102.5349609375 35.0V18.671875H107.0251953125Q108.787890625 18.671875 109.678515625 19.650634765625Q110.569140625 20.62939453125 110.569140625 22.5126953125V30.1572265625Q110.569140625 32.4765625 109.757373046875 33.73828125Q108.94560546875 35.0 106.9138671875 35.0ZM105.819140625 32.11474609375H106.38505859375Q107.2849609375 32.11474609375 107.2849609375 31.24267578125V22.81884765625Q107.2849609375 22.00244140625 107.066943359375 21.765869140625Q106.84892578125 21.529296875 106.18095703125 21.529296875H105.819140625ZM112.896640625 35.0V18.671875H116.0509375V35.0ZM118.489765625 35.0V18.671875H121.8481640625L123.35109375 26.49267578125V18.671875H126.505390625V35.0H123.313984375L121.681171875 26.8359375V35.0Z" fill="#F5F3FF"/>
+  <g transform="translate(164 19)" fill="none" stroke="#00E5FF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="flick">
+    <path d="M2 14 14 2M5 2h9v9"/>
   </g>
 </svg>

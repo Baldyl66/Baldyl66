@@ -1,18 +1,16 @@
 <div align="center">
 
-<a href="#!"><img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,55:1E1B4B,100:4F46E5&height=210&section=header&text=Dylan%20Balmigere&fontSize=52&fontColor=F8FAFC&fontAlignY=36&desc=Software%20Developer%20%C2%B7%20Games%20%C2%B7%20Creative%20Technology&descSize=16&descAlignY=56&descColor=C7D2FE&animation=fadeIn" width="100%" alt="Dylan Balmigere" /></a>
-
-<a href="#!"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=2800&pause=1000&color=6366F1&center=true&vCenter=true&width=560&height=34&lines=Building+ideas+into+experiences.;Android+%C2%B7+Web+%C2%B7+Game+Development;Clean+interfaces%2C+solid+architecture.;Currently+exploring+AI+integration." alt="Tagline" /></a>
+<a href="#!"><img src="assets/header.svg" width="100%" alt="Dylan Balmigere, Software Developer, Games, Creative Tech" /></a>
 
 <br/><br/>
 
-<a href="https://www.linkedin.com/in/dylan-balmigere-72aa85335/"><img src="assets/btn-linkedin.svg" height="48" alt="LinkedIn" /></a>
-<a href="https://dylan-balmigere.fr"><img src="assets/btn-portfolio.svg" height="48" alt="Portfolio" /></a>
-<a href="mailto:dylanbalmigere@gmail.com"><img src="assets/btn-email.svg" height="48" alt="Email" /></a>
+<a href="https://www.linkedin.com/in/dylan-balmigere-72aa85335/"><img src="assets/btn-linkedin.svg" height="54" alt="LinkedIn" /></a>
+<a href="https://dylan-balmigere.fr"><img src="assets/btn-portfolio.svg" height="54" alt="Portfolio" /></a>
+<a href="mailto:dylanbalmigere@gmail.com"><img src="assets/btn-email.svg" height="54" alt="Email" /></a>
 
 <br/>
 
-<a href="#!"><img src="https://komarev.com/ghpvc/?username=Baldyl66&style=flat-square&color=4F46E5&label=profile+views" alt="Profile views" /></a>
+<a href="#!"><img src="https://komarev.com/ghpvc/?username=Baldyl66&style=flat-square&color=FF2E88&label=profile+views" alt="Profile views" /></a>
 
 <br/><br/>
 
@@ -39,26 +37,18 @@
 
 <a href="#!"><img src="assets/title-activity.svg" width="100%" alt="GitHub Activity" /></a>
 
-<a href="#!"><img src="https://github-readme-stats.vercel.app/api?username=Baldyl66&show_icons=true&theme=transparent&hide_border=true&title_color=6366F1&icon_color=6366F1&text_color=8B949E&hide_rank=true" height="165" alt="GitHub stats" /></a>
-<a href="#!"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Baldyl66&layout=compact&langs_count=6&theme=transparent&hide_border=true&title_color=6366F1&text_color=8B949E" height="165" alt="Top languages" /></a>
+<a href="#!"><img src="https://github-readme-stats.vercel.app/api?username=Baldyl66&show_icons=true&hide_rank=true&hide_border=true&border_radius=18&bg_color=0A0814&title_color=FF2E88&icon_color=00E5FF&text_color=D9D4F2" height="165" alt="GitHub stats" /></a>
+<a href="#!"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Baldyl66&layout=compact&langs_count=6&hide_border=true&border_radius=18&bg_color=0A0814&title_color=00E5FF&text_color=D9D4F2" height="165" alt="Top languages" /></a>
 
-<a href="#!"><img src="https://streak-stats.demolab.com?user=Baldyl66&theme=transparent&hide_border=true&ring=6366F1&fire=6366F1&currStreakLabel=6366F1&sideLabels=8B949E&currStreakNum=8B949E&sideNums=8B949E&dates=8B949E" alt="GitHub streak" /></a>
-
-<br/>
-
-<a href="#!">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Baldyl66/Baldyl66/output/pacman-contribution-graph-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Baldyl66/Baldyl66/output/pacman-contribution-graph.svg" />
-    <img src="https://raw.githubusercontent.com/Baldyl66/Baldyl66/output/pacman-contribution-graph.svg" width="100%" alt="Pac-Man contribution graph" />
-  </picture>
-</a>
+<a href="#!"><img src="https://streak-stats.demolab.com?user=Baldyl66&hide_border=true&border_radius=18&background=0A0814&ring=FF2E88&fire=00E5FF&currStreakLabel=FF2E88&sideLabels=00E5FF&currStreakNum=F5F3FF&sideNums=F5F3FF&dates=A9A3C7&stroke=2A1F45" alt="GitHub streak" /></a>
 
 <!-- SPOTIFY : remplace TON-APP par ton domaine Railway puis enleve les balises de commentaire
 <br/>
-<a href="https://open.spotify.com/"><img src="https://TON-APP.up.railway.app/api/orchestrator?background_color=0F172A&border_color=4F46E5&show_status=true" alt="Now playing on Spotify" /></a>
+<a href="https://open.spotify.com/"><img src="https://TON-APP.up.railway.app/api/orchestrator?background_color=0A0814&border_color=FF2E88&show_status=true" alt="Now playing on Spotify" /></a>
 -->
 
-<a href="#!"><img src="https://capsule-render.vercel.app/api?type=waving&color=0:4F46E5,45:1E1B4B,100:0F172A&height=110&section=footer&text=Create%20%C2%B7%20Experiment%20%C2%B7%20Repeat&fontSize=18&fontColor=C7D2FE&fontAlignY=72" width="100%" alt="Create, Experiment, Repeat" /></a>
+<br/><br/>
+
+<a href="#!"><img src="assets/footer.svg" width="100%" alt="Create. Break. Rebuild." /></a>
 
 </div>
