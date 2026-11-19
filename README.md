@@ -4,10 +4,10 @@
 
 <br/><br/>
 
-<a href="https://www.linkedin.com/in/dylan-balmigere-72aa85335/"><img src="assets/neon/btn-linkedin.svg" height="48" alt="LinkedIn" /></a>
-<a href="https://dylan-balmigere.fr"><img src="assets/neon/btn-portfolio.svg" height="48" alt="Portfolio" /></a>
-<a href="https://x.com/DBalmigere"><img src="assets/neon/btn-x.svg" height="48" alt="X / Twitter" /></a>
-<a href="mailto:dylanbalmigere@gmail.com"><img src="assets/neon/btn-email.svg" height="48" alt="Email" /></a>
+<a href="https://www.linkedin.com/in/dylan-balmigere-72aa85335/"><img src="assets/neon/btn-linkedin-art.webp" width="24%" alt="LinkedIn" /></a>
+<a href="https://dylan-balmigere.fr"><img src="assets/neon/btn-portfolio-art.webp" width="24%" alt="Portfolio" /></a>
+<a href="https://x.com/DBalmigere"><img src="assets/neon/btn-x-art.webp" width="24%" alt="X / Twitter" /></a>
+<a href="mailto:dylanbalmigere@gmail.com"><img src="assets/neon/btn-email-art.webp" width="24%" alt="Email" /></a>
 
 <a href="#!"><img src="assets/neon/btn-views.svg" height="48" alt="Profile views" /></a>
 <img src="https://komarev.com/ghpvc/?username=Baldyl66" width="1" height="1" alt="" />
