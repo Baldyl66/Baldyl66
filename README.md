@@ -52,6 +52,6 @@
 
 <br/><br/>
 
-<a href="#!"><img src="assets/neon/footer-art.svg" width="100%" alt="Create. Break. Rebuild." /></a>
+<a href="#!"><img src="assets/neon/footer-art-2.svg" width="100%" alt="Create. Break. Rebuild." /></a>
 
 </div>
